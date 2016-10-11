@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+  <head>
+    <meta charset="utf-8">
+    <title>Module1-Solution</title>
+    <style>
+      div.alert{
+        color: red;
+      }
+
+      div.success{
+        color: green;
+      }
+
+      input.alert{
+        border-color: red;
+      }
+
+      input.success{
+        border-color: green;
+      }
+
+    </style>
+    <script type="text/javascript" src="\js\angular.min.js"></script>
+    <script type="text/javascript" src="\js\app.js"></script>
+  </head>
+  <body>
+    <div ng-controller="LunchCheckController">
+      <input class="ng-style: {{inputClass}}" type="textbox" ng-model="lunchItems" /><span>Empty value is not taken</span>
+      <div class="ng-style: {{messageClass}}">
+        {{messageResult}}
+      </div>
+      <br />
+      <button ng-click="checkLunchItems();">Check If Too Much</button>
+    </div>
+  </body>
+</html>
