@@ -11,7 +11,7 @@ function LunchCheckController($scope){
 
   $scope.lunchItems = "";
   $scope.messageResult = "";
-  $scope.messageClass = "alert";
+  $scope.messageClass = "";
   $scope.inputClass = "";
 
   $scope.checkLunchItems = function(){
@@ -19,6 +19,7 @@ function LunchCheckController($scope){
     if($scope.lunchItems == null || $scope.lunchItems === ""){
 
       $scope.messageResult = "Please enter data first";
+      $scope.messageClass = "alert";
       $scope.inputClass = "alert";
       return;
     }
@@ -27,6 +28,7 @@ function LunchCheckController($scope){
     if(items.length === 0){
 
       $scope.messageResult = "Please enter data first";
+      $scope.messageClass = "alert";
       $scope.inputClass = "alert";
       return;
     }
